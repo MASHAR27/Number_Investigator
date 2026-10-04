@@ -1,4 +1,23 @@
-numbers = [4, 7, 2, 7, 9, 4, 7, 2, 10, 9, 15, 4] # Just for testing  my code
+print("Keep entering numbers for the list , and if satisfied with the list , press zero to view the statistics")
+numbers = []
+
+while True:
+    list_num = input("Enter the number for the list:  ").strip()
+    if not list_num.isdigit():
+        print("Please enter a number only ")
+        continue
+        
+    list_num = int(list_num )
+    if list_num  == 0:
+        if len(numbers) == 0:
+            print("Please have at least one number in the list before exiting ")
+            continue
+        else:
+            break
+    numbers.append(list_num)    
+        
+    
+print(f"Your list = {numbers}")
 
 # Firstly I want to create a unique values counter function
 def unique_val(numbers):
@@ -10,7 +29,7 @@ def unique_val(numbers):
     return len(unique)
 
 
-print(unique_val(numbers))
+
 
 
 def num_of_duplicates(numbers):
@@ -27,7 +46,7 @@ def num_of_duplicates(numbers):
     return duplicates
 
 
-print(num_of_duplicates(numbers))
+
             
         
     
@@ -42,7 +61,7 @@ def most_freq(numbers):
     return max(seen,key = seen.get)    
  
 
-print(most_freq(numbers))
+
 
 
 def find_largest(numbers):
@@ -55,8 +74,7 @@ def find_largest(numbers):
             
     return largest
 
-
-print(find_largest(numbers))        
+       
 
 
 
@@ -69,8 +87,7 @@ def  find_smallest(numbers):
             smallest = num
             
     return smallest
-
-print(find_smallest(numbers))        
+     
 
 
 
@@ -87,4 +104,16 @@ def  find_avg(numbers):
 
 
 
-print(find_avg(numbers))    
+
+
+
+
+print("Number Investigator in Action:  ")
+print("The number of unique values in the list:  ",unique_val(numbers))
+print("These numbers are duplicates in the list:  ",num_of_duplicates(numbers))
+print("The most frequent occurring number in the list: ",most_freq(numbers))
+print("Largest number of the list:  ",find_largest(numbers))
+print("Smallest number in the list: ",find_smallest(numbers))
+print("Average of all the numbers in the list: ",find_avg(numbers))
+
+
