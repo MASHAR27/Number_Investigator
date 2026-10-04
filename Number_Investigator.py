@@ -13,3 +13,22 @@ def unique_val(numbers):
 print(unique_val(numbers))
 
 
+def num_of_duplicates(numbers):
+    """ To return the numbers which are duplicates in the list """
+    
+    duplicates = set()
+    seen = []
+    for num in numbers:
+        if num in seen:
+            duplicates.add(num)
+        else:
+            seen.append(num)
+            
+    return duplicates
+
+
+print(num_of_duplicates(numbers))
+            
+        
+    
+    
