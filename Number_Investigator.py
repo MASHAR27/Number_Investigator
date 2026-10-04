@@ -43,3 +43,48 @@ def most_freq(numbers):
  
 
 print(most_freq(numbers))
+
+
+def find_largest(numbers):
+    """ Returns the largest number in the list """
+    largest = numbers[0]
+    
+    for num in numbers:
+        if num > largest:
+            largest = num
+            
+    return largest
+
+
+print(find_largest(numbers))        
+
+
+
+def  find_smallest(numbers):
+    """ Return the smallest number in the list  """
+    smallest = numbers[0]
+    
+    for num in numbers:
+        if num < smallest:
+            smallest = num
+            
+    return smallest
+
+print(find_smallest(numbers))        
+
+
+
+
+def  find_avg(numbers):
+    """ Returns the average of the numbers in the list """
+    
+    total = 0
+    for num in numbers:
+        total += num
+        
+    return total/(len(numbers))
+
+
+
+
+print(find_avg(numbers))    
