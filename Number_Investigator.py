@@ -32,3 +32,14 @@ print(num_of_duplicates(numbers))
         
     
     
+def most_freq(numbers):
+    """ Finds the most frequently occurring number in the list  """
+    seen = {}
+    
+    for num in numbers:
+        seen[num] = seen.get(num,0) + 1 # I increment the frequency as a value each time this number appears
+        
+    return max(seen,key = seen.get)    
+ 
+
+print(most_freq(numbers))
